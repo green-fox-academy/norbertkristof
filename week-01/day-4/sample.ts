@@ -1,13 +1,8 @@
-const pi: number = 3.14;
-let times: number = 12;
-let myName: string = "Norbs";
+let a:number = 1;
+let b:number = 2;
+let c:number = 3;
 
-let itCanbeUndefined: number;
-console.log(itCanbeUndefined);
+let isItEqual = (a + b) = c;
 
-console.log("Printing on the screen...");
-console.log(times);
-console.log(myName);
-console.log(true);
-console.log(80 * 2);
-console.log(1.333333);
+console.log(typeof isItEqual);
+console.log (isItEqual);
