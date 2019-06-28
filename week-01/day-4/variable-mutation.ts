@@ -1,3 +1,5 @@
+'use strict';
+
 let a: number = 3;
 console.log(a + 10);
 let b: number = 100;
@@ -28,5 +30,5 @@ let i2: number = 3;
 let iWhat: boolean = i1 > i2 ** 2 && i1 < i2 ** 3;
 console.log(iWhat);
 
-let j: number = 1521;
-console.log(j % 3 == 0 && j % 5 == 0);
+//let j: number = 1521;
+//console.log(j % 3 == 0 && j % 5 == 0);

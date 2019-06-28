@@ -1,3 +1,4 @@
+'use strict';
 let myName: string = 'Norbert Kristof';
 let myAge: number = 38;
 let myHeight: number = 1.82;
