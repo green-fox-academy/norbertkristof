@@ -1,6 +1,6 @@
 'use strict';
 
-let a: number = 25;
+let a: number = 24;
 let out: number = 0;
 if (a % 2 === 0) {
     out ++;
