@@ -1,3 +1,5 @@
+'use strict';
+
 // -  Create (dynamically*) a two dimensional list
 //    with the following matrix**. Use a loop!
 //
@@ -11,25 +13,24 @@
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
 
-'use strict';
 
-let matrix: number[][] = [
-    [],
-    [1],
-    [1],
-    [1],
-];
 
-let size: number = 5;
-for (let index = 0; index < size; index++) {
-    let row: number[] = [];
-    for (let inner: number = 0; inner < size; inner++) {
-        row.push(inner);
+function matrix(lengthOfRow) {
+    let x: number[][] = [];
+    for ( let outerArray: number = 0; outerArray < lengthOfRow; outerArray++) {
+        let row: number[] = [];
+        for (let column: number = 0; column < lengthOfRow - outerArray -1; column++) {
+            row.push(0);
+        }
+        row.push(1);
+        for (let columnsAfterOne: number = 0; columnsAfterOne < outerArray ; columnsAfterOne++) {
+            row.push(0);
+        }
+        x.push(row);
+
+
     }
-    matrix.push([index]);
+    console.log(x);
 }
-matrix.forEach(function(row) {
-    
-}
-])
-console.log(row.join);
+
+matrix(5);
