@@ -3,21 +3,12 @@
 // -  Log the result of `doubling(baseNum)` to the console
 
 'use strict';
-//let baseNum: number = 123;
-//function makeGreen(name: doubler): any {
-//    let newName = `Green ${name}`;
-//    return newName;
-//  }
-
-
-//console.log(doubling(baseNum));
-
-
 
 let baseNum: number = 123;
+
 function doubling(baseNum) {
     let result: number = baseNum * 2;
     return result;
- }
- 
- console.log(doubling(baseNum));
+}
+
+console.log(doubling(baseNum));

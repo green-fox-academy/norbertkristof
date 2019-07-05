@@ -3,20 +3,16 @@
 
 'use strict';
 
-//let ai: number[] = [3, 4, 5, 6, 7];
+let ai: number[] = [3, 4, 5, 6, 7];
 
 function sum(input) {
-
-  if (toString.call(input) !== "[object Array]")
-    return false;
-
-  var total = 0;
-  for (var i = 0; i < input.length; i++) {
-    if (isNaN(input[i])) {
-      continue;
+    let total = 0;
+    for (let i = 0; i < input.length; i++) {
+        if (isNaN(input[i])) {
+            continue;
+        }
+        total = total + Number(input[i]);
     }
-    total += Number(input[i]);
-  }
-  return total;
+    return total;
 }
-console.log(sum([3, 4, 5, 6, 7]));
+console.log(sum(ai));

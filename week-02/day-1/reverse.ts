@@ -7,6 +7,18 @@
 
 'use strict';
 
-let numList: number[] = [3, 4, 5, 6, 7].reverse();
+// with the built in method
 
-console.log("Reversed array is : " + numList );
+let numList: number[] = [3, 4, 5, 6, 7];
+console.log(numList.reverse());
+
+// new temp array and loooop
+
+let numList1: number[] = [3, 4, 5, 6, 7];
+let numList2: number[] = []
+
+for (let index: number = numList1.length - 1; index >= 0; index--) {
+    numList2.push(numList1[index]);
+}
+
+console.log(numList2);

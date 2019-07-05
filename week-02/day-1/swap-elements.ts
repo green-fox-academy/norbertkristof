@@ -4,27 +4,14 @@
 'use strict';
 
 let abc: string[] = ["Arthur", "Boe", "Chloe"];
-abc[3] = abc[0];
-console.log(abc);
-abc[0] = abc[2];
-console.log(abc);
-abc.splice(2, 1);
-console.log(abc);
-//abc[2] = abc[0];
-//abc.shift();
+let def: string[] = [abc[2], abc[1], abc[0]];
 
-// 
-//
+console.log(def);
 
-//console.log(abc[0], abc[1], abc[3]);  
+// alternate
 
-console.log(abc);
-
-//'use strict';
-//let a: number = 123;
-//let b: number = 526;
-//let c: number = a;
-//a = b;
-//b = c;
-//console.log(a);
-//console.log(b);
+let ddd: string[] = ["Arthur", "Boe", "Chloe"];
+ddd[3] = ddd[0];
+ddd[0] = ddd[2];
+ddd.splice(2, 1);
+console.log(ddd);

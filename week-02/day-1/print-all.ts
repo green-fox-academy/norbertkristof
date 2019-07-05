@@ -7,22 +7,13 @@
 
 let integers: number[] = [4, 5, 6, 7];
 
-//integers.forEach(function(item) {
-//    console.log(item);
-// })
- 
-// for (let index: number = 0; index < integers.length; index++) {
-//    console.log(integers[index])
-//}
-
-
-function getNewArr(){
-        
-    return integers.map(function(item,index){
-        item.full_name = [item.first_name,item.last_name].join(" ");
-        return item;
-    })
-    
+for (let i: number = 0; i < integers.length; i++) {
+    console.log(integers[i]);
 }
 
-console.log(getNewArr());
+// hi level alternate /w function
+
+let integers2: number[] = [4, 5, 6, 7];
+integers2.forEach(function (item) {
+    console.log(item);
+})
