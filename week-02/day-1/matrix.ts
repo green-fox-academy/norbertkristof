@@ -17,6 +17,7 @@
 
 function matrix(lengthOfRow) {
     let x: number[][] = [];
+    
     for (let outerArray: number = 0; outerArray < lengthOfRow; outerArray++) {
         let row: number[] = [];
         for (let column: number = 0; column < lengthOfRow - outerArray - 1; column++) {
@@ -31,3 +32,4 @@ function matrix(lengthOfRow) {
     console.log(x);
 }
 matrix(5);
+
