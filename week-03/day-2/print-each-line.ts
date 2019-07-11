@@ -11,7 +11,7 @@ const fs = require('fs');
 
 let content;
 try {
-content = fs.readFileSync('my-file2.txt', 'utf-8');
+content = fs.readFileSync('my-file.txt', 'utf-8');
 console.log(content);
 }
 catch (e) {
