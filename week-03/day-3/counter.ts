@@ -1,39 +1,54 @@
-'use strict';
+'use string';
+
+// Create a Counter class
+// which has an integer property
+// when creating it should have a default value 0 or we can specify it when creating
+// we can add(number) to increase the counter's value by a whole number
+// or we can add() without parameters just increasing the counter's value by one
+// and we can get() the current value as string
+// also we can reset() the value to the initial value
 
 class Counter {
-    integer: number;
-    initialValue: number;
+  counter: number;
+  initialValue: number;
 
-    constructor(integer: number) {
-        this.integer = integer;
-        this.initialValue = integer;
-    }
+  constructor(counter: number = 0) {
+    this.counter = counter;
+    this.initialValue = counter;
+  }
 
-    add(nyomor):number {
-        let nyomor: number === 0;
-        this.integer + nyomor;
-    }
-    add():number {
-        this.integer;
-    }
-    get():number {
-        this.integer;
-    }
-    reset():number {
-        this.integer;
-    }
+  add(num: number = 1): void {
+    this.counter += num;
+  }
 
-    
-        // this.id = Cookie.lastId;
-        // Cookie.lastId++;
-    }
+  get(): string {
+    return this.counter.toString();
+  }
+
+  reset(): void {
+    this.counter = this.initialValue;
+  }
 }
 
-let : Sharpie = new Sharpie('red', 10, 100);
+// Two objects
+let counter1: Counter = new Counter();
+let counter2: Counter = new Counter(20);
 
+// Check the initial states
+console.log(counter1);
+console.log(counter2);
 
-redSharpie.use();
+// Check add methods
+counter2.add();
+console.log(counter2);
 
-console.log(redSharpie);
-console.log(greenSharpie);
-console.log(blueSharpie);
+counter2.add(20);
+console.log(counter2);
+
+// Check get method
+console.log(counter2.get());
+console.log(typeof counter2.get());
+
+// Check reset method
+counter2.reset();
+console.log(counter2);
