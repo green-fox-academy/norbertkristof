@@ -200,4 +200,4 @@ const ctx = canvas.getContext('2d');
         ctx.shadowBlur = 15;
         ctx.fillText("T H E   D E V I L ' S   T A B L E", 840, 570);
         
-    },1200*15)
+    },1200*16)

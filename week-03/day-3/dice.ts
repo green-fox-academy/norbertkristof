@@ -41,6 +41,9 @@ let diceSet = new DiceSet();
 console.log(diceSet.roll());
 console.log(diceSet.getCurrent());
 
+
+
+
 let currentState: any = diceSet.getCurrent();
 
 for (let j: number = 0; j < currentState.length; j++) {
