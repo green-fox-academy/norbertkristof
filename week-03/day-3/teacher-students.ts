@@ -34,7 +34,7 @@ class Student {
     this.name = stName;
   }
 
-  learn() {
+  learn(): void {
     console.log(this.name + ' is learning something new.');
   }
 

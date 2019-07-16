@@ -5,7 +5,7 @@ let lineCount: number = 7;
 for (let i: number = 0; i < (lineCount / 2); i++) {
   let row: string = '';
   for (let j: number = 1; j < lineCount - i; j++) {
-    row = row + ' ';
+    row = row + 'O';
   }
   for (let k: number = 1; k <= (2 * i + 1); k++) {
     row = row + '*';
@@ -15,8 +15,7 @@ for (let i: number = 0; i < (lineCount / 2); i++) {
 
 for (let i: number = 1; i <= (lineCount / 2); i++) {
   let row: string = '';
-  let lineCountDiff: number = i;
-  for (let j: number = 1; j <= lineCountDiff + 3; j++) {
+  for (let j: number = 1; j <= i + 3; j++) {
     row = row + ' ';
   }
   for (let k: number = 1; k <= (lineCount / 2) * 2 - (i * 2); k++) {
@@ -24,10 +23,6 @@ for (let i: number = 1; i <= (lineCount / 2); i++) {
   }
   console.log(row);
 }
-
-
-
-
 
   // Write a program that draws a
   // diamond like this:
