@@ -22,7 +22,7 @@ function initializePokemon(): Pokemon[] {
     ];
 }
 
-let PokeTheWinner: Pokemon ;
+//let PokeTheWinner: Pokemon ;
 
 //console.log('I choose you, ', );
 

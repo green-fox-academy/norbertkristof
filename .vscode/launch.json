@@ -8,9 +8,10 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/week-02/day-1/matrix2.ts",
+            "program": "/Users/kristofnorbert/Desktop/repo/training/tsconfig.json",
+            "preLaunchTask": "tsc: build - /Users/kristofnorbert/Desktop/repo/training/tsconfig.json",
             "outFiles": [
-                "${workspaceFolder}/**/*.ts"
+                "/Users/kristofnorbert/Desktop/repo/build/**/*.js"
             ]
         }
     ]

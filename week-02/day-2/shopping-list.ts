@@ -2,7 +2,7 @@
 
 export{};
 
-// # Shopping list      NEM MUXIK!!!!!!!!!!!!!!!!
+// # Shopping list
 
 // We are going to represent a shopping list in a list containing strings.
 

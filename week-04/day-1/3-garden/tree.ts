@@ -1,27 +1,25 @@
-'use strict'
+// The Garden Application
+// The task is to create a garden application, so in your main method you should create a garden with flowers and trees.
+// The program should demonstrate an example garden with two flowers (yellow and blue) and two trees (purple and orange).
+// In the example after creating them you should show the user, how the garden looks like.
+// After that the program should water the garden twice, first with the amount of 40 then with 70.
+// And after every watering the user should see the state of the garden as you can see in the output.
 
-import Plant from "./plant";
+// The Tree
+// needs water if its current water amount is less then 10
+// when watering it the tree can only absorb the 40% of the water
+// eg. watering with 10 the tree's amount of water should only increase with 4
 
-class Tree extends Plant {
+'use strict';
 
-    constructor(color: string) {
-        super(color, 0.4);
-    }
+import Plant from './plant'
 
-    isThirsty(): boolean {
-        return this.waterAmount < 10;
-    }
+export default class Tree extends Plant {
 
-    status():void {
-        let stat: string;
-        if(this.isThirsty()) {
-            stat = 'needs'
-        } else {
-            stat = 'doesn\'t neeed'
-        }
-        console.log(`The ${this.color} tree ${stat} water`)
+    constructor(color: string, waterAmount: number) {
+        super(color, waterAmount);
+        this.needsWaterParam = 10;
+        this.absorbtionParam = 0.4;
     }
 
 }
-
-export default Tree;

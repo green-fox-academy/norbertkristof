@@ -1,6 +1,6 @@
 'use strict';
 
-let lineCount: number = 75;
+let lineCount: number = 5;
 
 // Write a program that draws a
 // pyramid like this:

@@ -1,58 +1,66 @@
+// The Garden Application
+// The task is to create a garden application, so in your main method you should create a garden with flowers and trees.
+// The program should demonstrate an example garden with two flowers (yellow and blue) and two trees (purple and orange).
+// In the example after creating them you should show the user, how the garden looks like.
+// After that the program should water the garden twice, first with the amount of 40 then with 70.
+// And after every watering the user should see the state of the garden as you can see in the output.
+
+// The Garden
+// is able to hold unlimited amount of flowers or trees
+// when watering it should only water those what needs water with equally divided amount amongst them
+// eg. watering with 40 and 4 of them need water then each gets watered with 10
+
 'use strict'
 
-import Flower from "./flower";
-import Tree from "./tree";
+import Plant from './plant'
+import Flower from './flower';
+import Tree from './tree';
 
-class Garden {
-    flowers: Flower[];
-    trees: Tree[];
+export default class Garden {
+    plantsInHere: Plant[];
+
+    initGarden() {
+        this.plantsInHere.push(new Flower('yellow', 0));
+        this.plantsInHere.push(new Flower('blue', 0));
+        this.plantsInHere.push(new Tree('purple', 0));
+        this.plantsInHere.push(new Tree('orange', 0));
+    }
 
     constructor() {
-        this.flowers = [];
-        this.trees = [];
+        this.plantsInHere = [];
+        this.initGarden;
     }
 
-    addFlower(flower: Flower) {
-        this.flowers.push(flower);
-    }
-
-    countThirstyPlants(): number {
-        let sum: number = 0;
-        this.flowers.forEach(function(oneFlower){
-            if(oneFlower.isThirsty()) {
-                sum++;
+    waterPlants(amount: number) {
+        console.log(`Watering with ${amount}.`);
+        let howManyNeedWater: number = 0;
+        this.plantsInHere.forEach((element: Plant) => {
+            if (element.needsWater()) {
+                howManyNeedWater++;
             }
         });
-        this.trees.forEach(function(oneTree){
-            if(oneTree.isThirsty()) {
-                sum++;
-            }
-        });
-        return sum;
-    }
 
-    calculatePortion(ammount: number): number {
-        const thirstyPlantNumber: number = this.countThirstyPlants();
-        return ammount / thirstyPlantNumber;
-    }
-
-    waterPlants(ammount: number): void {
-        const portion: number = this.calculatePortion(ammount)
-        console.log(`Watering with ${ammount}`);
-        for(let i: number = 0; i < this.flowers.length; i++) {
-            if(this.flowers[i].isThirsty()) {
-                this.flowers[i].watering(portion);
-            }
-            this.flowers[i].status();
+        if (howManyNeedWater != 0) {
+            this.plantsInHere.forEach((element: Plant) => {
+                if (element.needsWater()) {
+                    element.getWatered(amount / howManyNeedWater);
+                }
+            });
         }
-        this.trees.forEach(function(oneTree) {
-            if(oneTree.isThirsty()) {
-                oneTree.watering(portion);
+
+        this.getWaterInfo();
+        // console.log(this.plantsInHere);
+    }
+
+    getWaterInfo() {
+        this.plantsInHere.forEach((element: Plant) => {
+            if (element.needsWater()) {
+                console.log(`The ${element.color} ${element.constructor.name} needs water.`);
             }
-            oneTree.status();
-        });
-        
+            else {
+                console.log(`The ${element.color} ${element.constructor.name} doesn't need water.`);
+            }
+        })
+
     }
 }
-
-export default Garden;

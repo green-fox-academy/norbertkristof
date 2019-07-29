@@ -1,20 +1,31 @@
+// The Garden Application
+// The task is to create a garden application, so in your main method you should create a garden with flowers and trees.
+// The program should demonstrate an example garden with two flowers (yellow and blue) and two trees (purple and orange).
+// In the example after creating them you should show the user, how the garden looks like.
+// After that the program should water the garden twice, first with the amount of 40 then with 70.
+// And after every watering the user should see the state of the garden as you can see in the output.
+
 'use strict'
 
-class Plant {
+export default class Plant {
     color: string;
-    waterAmount: number;
-    waterAbsorbRate: number;
+    waterAmount: number = 0;
+    needsWaterParam: number;
+    absorbtionParam: number;
 
-    constructor(color: string, waterAbsorbRate: number = 1) {
+    constructor(color: string, waterAmount: number) {
         this.color = color;
-        this.waterAmount = 0;
-        this.waterAbsorbRate = waterAbsorbRate;
+        this.waterAmount = waterAmount;
+    }
+
+    needsWater(): boolean {
+        return (this.waterAmount > this.needsWaterParam ? false : true);
     }
 
 
-    watering(ammount: number): void {
-        this.waterAmount += ammount * this.waterAbsorbRate;
+    getWatered(amount: number) {
+        this.waterAmount += amount * this.absorbtionParam;
     }
+
+
 }
-
-export default Plant;

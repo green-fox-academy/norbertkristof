@@ -5,23 +5,57 @@
 
 'use strict';
 
-export = {};
-
 declare function require(path: string): any;
+const fs = require('fs');
 
-const fs: any = require('fs');
+let sourceFile: string = 'log.txt';
+let content: string;
+let textLines: string[] = [];
 
-function readLogFile(fileName: string): string {
-    try {
-        return fs.readFileSync(fileName);
-    } catch (error) {
-        return '';
-    }
+if (!fs.existsSync(sourceFile)) {
+    throw Error('source file doesn\'t exist');
 }
 
-let fileContent : string = readLogFile('log.txt');
+try {
+    content = fs.readFileSync(sourceFile, 'utf-8');
+    console.log('successful read');
 
-function(createLinesBasedOnTextContent(fileContent));
-    return fileContent.split('\n');
+} catch (err) {
+    console.error(err.message);
+}
 
-console.log(createLinesBasedOnTextContent(fileContent));
+let uniqueIPs = (text: string): string[] => {
+    let textLines: string[] = text.split('\n');
+    let firstDotIndex: number = textLines[0].indexOf('.');
+    let allIPs: string[] = textLines.map((value) => value.slice(firstDotIndex - 2, firstDotIndex + 9));
+    let uniqueIPs: string[] = [];
+
+    for (let i = allIPs.length; i > 0; i--) {
+        if (allIPs.indexOf(allIPs[i]) == i) {
+            uniqueIPs.push(allIPs[i]);
+        }
+
+    }
+    console.log(allIPs);
+    return uniqueIPs;
+}
+
+let ratioOfRequests = (text: string): number => {
+    let textLines: string[] = text.split('\n');
+
+    let numberOfGet: number = 0;
+    let numberOfPost: number = 0;
+    for (let i = 0; i < textLines.length; i++) {
+        if (textLines[i].indexOf('GET') != -1) {
+            numberOfGet++;
+        }
+        else if (textLines[i].indexOf('POST') != -1) {
+            numberOfPost++;
+        }
+    }
+    return numberOfGet / numberOfPost;
+}
+
+
+console.log(uniqueIPs(content));
+console.log(ratioOfRequests(content));
