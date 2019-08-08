@@ -1,29 +1,38 @@
+// Create a method that find the 5 most common lottery numbers in lottery.csv
 'use strict';
-declare function require(path: string): any;
+//declare function require(path: string): any;
 export {};
-const fs = require('fs');
-let contentOfLottery = fs.readFileSync('lottery.csv', 'utf-8');
-let content: string[] = contentOfLottery.split('\n');
-let lotteryNumbers: number[] = [];
-for (let i = 0; i < content.length; i++) {
-   let eachnumber = content[i].slice(-14).split(';').map(function(item) {
-       return parseInt(item, 10);
-   });;
-   for (let j = 0; j < eachnumber.length; j++) {
-   lotteryNumbers.push(eachnumber[j]);
-   }
+const fs = require("fs");
+​
+let content = fs.readFileSync("lottery.csv", "utf-8");
+let rows: string[] = content.split("\r");
+let lotteryNumberCounts: {[k:number]:number} = {};
+​
+for (let i = 0; i < rows.length; i++) {
+  let columns: string[] = rows[i].split(";");
+  for (let j = columns.length - 1; j > columns.length - 6; j--) {
+    let index: number = Number.parseInt(columns[j]);
+    if (lotteryNumberCounts[index]) {
+      lotteryNumberCounts[index]++;
+    } else {
+      lotteryNumberCounts[index]= 1;
+    }
+  }
 }
-function countLettersIntoMap(numbers: any): any {
-   let myMap = new Map();
-   for (let i: number = 0; i < numbers.length; i++) {
-     if (myMap.has(numbers[i])) {
-       let saveOrigNumber: number = myMap.get(numbers[i]);
-       myMap.delete(numbers[i]);
-       myMap.set(numbers[i], saveOrigNumber + 1);
-     } else {
-       myMap.set(numbers[i], 1);
-     }
-   }
-   return myMap;
- }
- console.log(countLettersIntoMap(lotteryNumbers));
+​
+let fiveMostCommon: {[k:number]:number} = {};
+for (let i = 0; i < 5; i++) {
+  let maxCount: number = 0;
+  let lotteryNumberForMaxCount: number = 0;
+ for (let key in lotteryNumberCounts) {
+    if (lotteryNumberCounts[key] > maxCount && fiveMostCommon[key] === undefined) {
+      maxCount = lotteryNumberCounts[key];
+      lotteryNumberForMaxCount = Number(key);
+    }
+    console.log(key);
+  }
+  fiveMostCommon[lotteryNumberForMaxCount] = maxCount;
+  //lotteryNumberCounts.delete(lotteryNumberForMaxCount); */
+}
+console.log(fiveMostCommon);
+
