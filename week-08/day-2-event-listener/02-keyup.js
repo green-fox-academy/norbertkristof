@@ -1,23 +1,4 @@
-//const log = document.getElementById('log');
-
-document.addEventListener('keyup', function() {
+document.addEventListener('keyup', function(event) {
     let pke = document.querySelector('h1');
-    pke.innerHTML = ` ${e.code}`;
-    //console.log(e.code);
+    pke.innerHTML = `Last Pressed Key Code is: ${event.keyCode}`;
 });
-
-// function logKey(e) {
-//   log.textContent += ` ${e.code}`;
-// }
-
-
-
-// let buttonka = document.querySelector('button');
-//      buttonka.addEventListener('click', function() {
-//          let list = document.getElementsByTagName('li'); // lehet querySelectorAll  is
-//          console.log(list);
-//          let pke = document.querySelector('p');
-//          pke.innerHTML = list.length;
-//          list[2].innerHTML = 'pista';
-//          list[3].textContent = 'jancsi';
-//      });
