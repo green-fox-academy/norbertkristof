@@ -1,6 +1,7 @@
 let xCor = 0;
 let yCor = 0;
 let size = 200;
+
 function navigate(ev) {
     if (event.target.getAttribute('data-action') === 'move') {
         if (event.target.getAttribute('data-direction') === 'up') {
@@ -21,6 +22,7 @@ function navigate(ev) {
     }
 }
 let div = document.querySelector('div');
-let nav = document.getElementsByTagName('nav');
+let nav = document.getElementsByTagName('nav'); // querySelectorAll is lehet
 let img = document.getElementsByClassName('img-inspector');
 nav[0].addEventListener('click', navigate);
+console.log(nav);
