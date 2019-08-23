@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background-color: lightgrey; 
+    height: 100vh;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  form > * {
+    display: flex;
+    flex-direction: center;
+  }
+
+  div {
+    background-color: white;
+    position: center;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: center;;
+  }
+  
+  input {
+    height: 2rem;
+    border-radius: 20px;
+  }
+  form > autofocus {
+    border-inline-color: green;
+  }
+
+  form > p1 {
+      font-size: 30px;
+      text-align: center;
+  }
+  form > p {
+    font-size: 18px;
+    text-align: right;
+  }
+
+  form > button {
+      font-size: 18px;
+  }
