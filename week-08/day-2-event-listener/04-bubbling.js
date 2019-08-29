@@ -2,7 +2,7 @@ let xCor = 0;
 let yCor = 0;
 let size = 200;
 
-function navigate(ev) {
+function navigate() {
     if (event.target.getAttribute('data-action') === 'move') {
         if (event.target.getAttribute('data-direction') === 'up') {
             div.style.backgroundPositionY = `${yCor-=10}px`;
@@ -22,7 +22,7 @@ function navigate(ev) {
     }
 }
 let div = document.querySelector('div');
-let nav = document.getElementsByTagName('nav'); // querySelectorAll is lehet
+let nav = document.querySelector('nav'); // querySelectorAll is lehet
 let img = document.getElementsByClassName('img-inspector');
-nav[0].addEventListener('click', navigate);
+nav.addEventListener('click', navigate);
 console.log(nav);

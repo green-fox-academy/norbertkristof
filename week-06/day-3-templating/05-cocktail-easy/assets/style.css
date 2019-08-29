@@ -1,0 +1,54 @@
+.container {
+    width: 600px;
+    margin: auto;
+    padding: 0px;
+  }
+  
+  ul {
+    margin-left: 0px; 
+    padding: 0px;
+  }
+  
+  li {
+      display: inline-block;
+      margin-right: 10px;
+      
+  }
+  
+  a { 
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+  
+  
+  a:hover {
+      color:black;
+  }
+  
+  table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+  
+    th {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      
+    }
+    
+    td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+  
+    .price {
+      text-align: center;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
