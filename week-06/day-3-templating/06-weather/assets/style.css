@@ -1,0 +1,70 @@
+* {
+    font-family: Lato;
+}
+
+.container {
+    background-color: gainsboro;
+    width: 440px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 15px;
+    
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    box-shadow: 10px 10px 42px -28px rgba(0,0,0,0.75);
+
+}
+
+.cityAndLocation {
+    flex-grow: 2;
+    margin-left: 30px;
+}
+
+.temperature {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.detailed {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dayCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 10px 10px 42px -28px rgba(0,0,0,0.75);
+}

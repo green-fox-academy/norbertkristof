@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+</head>
+<body>
+
+    <% %>
+    <div class='container'>
+        <% for (let i = 0; i < weatherForecasts.length; i++) { %>
+            <a class='link' href=<%='/details?city=' + weatherForecasts[i].city %>>
+            <div class='cards'>
+                <div class='cityAndLocation'>
+                <h3><strong><%= weatherForecasts[i].city %></strong></h3>
+                <p><%= weatherForecasts[i].location %></p>
+                </div>
+                <div class='temperature'>
+                <%= weatherForecasts[i].weather[0].temp + ' °C'%>
+                </div>
+                <div class='image'>
+                <img src='<%= weatherForecasts[i].weather[0].icon + '.png' %>' width= 100px height= 100px>
+                </div>
+            </div>
+                </a>
+            <% } %>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+</head>
+<body>
+    <div class='detailed'>
+        <% for (let i = 0; i < weatherForTheWeek.length; i++) { %>
+            <div class = 'dayCards'>
+                <div class='image'>
+                <img src=<%= weatherForTheWeek[i].icon + '.png' %> width= 100px height= 100px>
+                </div>
+                <div class='temperature'>
+                <%= weatherForTheWeek[i].temp + ' °C'%>
+                </div>
+                <div class='detailedWeather'>
+                <p><%= weatherForTheWeek[i].message %></p>
+                </div>
+            </div>
+            <% } %>
+    </div>
+</body>
+</html>
