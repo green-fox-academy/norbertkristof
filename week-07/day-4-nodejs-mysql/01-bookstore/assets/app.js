@@ -27,7 +27,7 @@ xhr.onreadystatechange = function() {
     }
   }
 };
-xhr.open('GET', 'http://localhost:8081/books');
+xhr.open('GET', 'http://localhost:8082/books');
 xhr.send('ok');
 
 const xhr2 = new XMLHttpRequest();
@@ -72,5 +72,5 @@ xhr2.onreadystatechange = function() {
   }
 };
 
-xhr2.open('GET', 'http://localhost:8081/table');
+xhr2.open('GET', 'http://localhost:8082/table');
 xhr2.send('gg');
