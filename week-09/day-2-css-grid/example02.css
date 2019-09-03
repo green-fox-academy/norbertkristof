@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    background-color:purple;
+    grid-gap: 8px;
+    grid-template-areas: 
+      "header main2"
+      "header1 main"
+      "header2 header4";
+}
+.item1 {
+    grid-area: header;
+    background-color: red;
+}
+.item2 {
+    grid-area: header1;
+    background-color:red;
+}
+.item3 {
+    grid-area: header2;
+    background-color:red;
+}
+.item4 {
+    grid-area: header3;
+    background-color:red;
+}
+.item5 {
+    grid-area: header4;
+    background-color:red;
+}
+.item6 {
+    grid-area: main2;
+    background-color:yellow;
+}
+.item7 {
+    grid-area: main;
+    background-color:green;
+}
