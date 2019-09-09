@@ -27,7 +27,7 @@ xhr.onreadystatechange = function() {
     }
   }
 };
-xhr.open('GET', 'http://localhost:8083/books');
+xhr.open('GET', 'http://localhost:8100/table');
 xhr.send('ok');
 
 const xhr2 = new XMLHttpRequest();
@@ -72,15 +72,5 @@ xhr2.onreadystatechange = function() {
   }
 };
 
-const buttonka = document.querySelector('button');
-
-      let exploTimeout = setTimeout(() => 
-          displayDIV.textContent = 'Bomb Exploded', displayDIV.textContent * 1000);
-
-      buttonka.onclick = () => {
-          displayDIV.textContent = 'Bomb defused';
-          clearTimeout(exploTimeout);
-      };
-
-xhr2.open('GET', 'http://localhost:8083/table');
+xhr2.open('GET', 'http://localhost:8100/table');
 xhr2.send('gg');

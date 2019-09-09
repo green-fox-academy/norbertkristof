@@ -8,21 +8,26 @@ Extra: create an interval which will update the remaining seconds in the display
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bomb defuse</title>
+  <title></title>
 </head>
 <body>
+
+
+
+
   <div class="display">10</div>
-  <button>Defuse</button>
+  <button>Defuze Bomb</button>
 </body>
   <script>
+
       const displayDIV = document.querySelector('.display');
       const buttonka = document.querySelector('button');
 
       let exploTimeout = setTimeout(() => 
-          displayDIV.textContent = 'Bomb Exploded', displayDIV.textContent * 1000);
+          displayDIV.textContent = 'Baaaaaaaaaaam!!!!!', displayDIV.textContent * 1000);
 
       buttonka.onclick = () => {
-          displayDIV.textContent = 'Bomb defused';
+          displayDIV.textContent = 'You can go back and live your pity life, you bastard!';
           clearTimeout(exploTimeout);
       }
 

@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    }
+    
+    main {
+        width: 800px;
+        background-color: white;
+        margin: 10px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(12, 1fr);
+        grid-gap: 10px;
+    }
+    
+    /*  */
+    
+    .text-bal {
+        background-color: green;
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+    
+    .text-bal > hr {
+        border: 2px solid black;
+        margin: 20px 10px;
+    }
+    
+    .text-bal > p {
+        border-bottom: 4px solid black;
+        padding: 10px;
+        margin: 0 250px 0 10px;
+    }
+    
+    /*  */
+
+    .text-jobbfent {
+        background-color: green;
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+    
+    .text-jobbfent > hr {
+        border: 2px solid black;
+        margin: 20px 10px;
+    }
+    
+    .text-jobbfent > p {
+        border-bottom: 4px solid black;
+        padding: 10px;
+        margin: 0 250px 0 10px;
+    }
+
+    /*  */
+
+    .text-jobblent {
+        background-color: green;
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+    
+    .text-jobblent > hr {
+        border: 2px solid black;
+        margin: 20px 10px;
+    }
+    
+    .text-jobblent > p {
+        border-bottom: 4px solid black;
+        padding: 10px;
+        margin: 0 250px 0 10px;
+    }
+
+    /*  */
+
+    .fox {
+        background-color: green;
+        grid-row: span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .artwork {
+        background-color: green;
+        grid-row: span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer {
+        background-color: gray;
+        grid-column: span 4;
+    
+    }

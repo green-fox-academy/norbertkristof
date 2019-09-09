@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form method="POST" action="/login">
+    <label>
+      Username:
+      <input name="username">
+    </label>
+    <label>
+      Password:
+      <input type="password" name="password">
+    </label>
+    <input type="submit" value="login">
+    <% if (typeof error !== 'undefined') {%>
+      <p><%=error%></p>
+    <% } %>
+  </form>
+  <script type="text/javascript">
+    const currentDate = new Date();
+    localStorage.setItem('last-login-visit', currentDate.toLocaleDateString());
+  </script>
+</body>
+</html>
